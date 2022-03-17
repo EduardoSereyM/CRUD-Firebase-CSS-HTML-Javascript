@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" href="data:,"> <!-- EVITA ERROR FAVICON  -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/33c9f9cf46.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/stile.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+
+    <title>Firebase CRUD</title>
+</head>
+
+<body>
+    <nav>
+        <h1 class="titlePpal">CRUD FIREBASE CSS HTML JAVASCRIPT</h1>
+        <h3>Crea modifica y elimina tarjetas</h3>
+        <div class="header">
+            <button name="btnModal" class="btnModal"> <span>NEW</span> <i class="fa-solid fa-square-plus fa-xl"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- MODAL  -->
+    <div class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title tituloItem">Add New Item</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <form id="task-form">
+                    <div class="div-taskItem">
+                        <div class="taskItem">
+                            <label for="task-title" class="task-title">Title</label>
+                            <input class="input" type="text" name="" id="task-title" placeholder="Task Title">
+                            <p style="visibility: hidden;" class="help is-danger taskTitleError">Ups! Minimo 3
+                                caracteres</p>
+                        </div>
+                        <div class="taskItem">
+                            <label for="task-description" class="task-description">Description</label>
+                            <textarea class="textarea" name="" id="task-description"
+                                placeholder="Task Description"></textarea>
+                            <p style="visibility: hidden;" class="help is-danger taskDescriptionError">Ups! Minimo 3
+                                caracteres</p>
+                        </div>
+                    </div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success" type="submit" id="btn-task-save">Save changes</button>
+                <button class="button btnCancelModal" type="reset">Clear</button>
+            </footer>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="task-container">
+        <h3 id="sinElementos" style="visibility: hidden;">Sin Elementos</h3>
+    </div>
+
+
+
+
+
+
+    <!-- SCRIPT : SE DEBE AGREGAR EL TIPO "MODULE" -->
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>
